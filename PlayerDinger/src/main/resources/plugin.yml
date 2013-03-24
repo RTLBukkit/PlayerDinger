@@ -1,0 +1,32 @@
+name: PlayerDinger
+main: com.taamc.PlayerDinger.PlayerDinger
+version: ${version}
+commands:
+  playerdingerdebug:
+    description: Toggles your debugging status for this plugin.
+    usage: /playerdingerdebug sound pitch volume
+    permission: playerdinger.debugcommand
+  playerdingerreload:
+    description: reloads the config for playerdinger.
+    usage: /playerdingerreload
+    permission: playerdinger.reload
+permissions:
+  playerdinger.*:
+    description: Gives access to all playerdinger commands
+    children:
+      playerdinger.debugcommand: true
+      playerdinger.ding.cause: true
+      playerdinger.ding.receive: true
+      playerdinger.reload: true
+  playerdinger.debugcommand:
+    description: Allows usage of playerdingerdebug
+    default: OP
+  playerdinger.ding.receive:
+    description: Allows you to receive player dings
+    default: true
+  playerdinger.ding.cause:
+    description: players with this permissions will cause a ding on join
+    default: true
+  playerdinger.reload:
+    description: allows player to reload the config
+    default: OP
