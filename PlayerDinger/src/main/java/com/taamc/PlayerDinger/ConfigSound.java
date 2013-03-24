@@ -10,7 +10,7 @@ public class ConfigSound extends Config {
     }
  
     String sound = "LEVEL_UP";
-    float pitch = .5f;
-    float volume = 2;
+    double pitch = .5;
+    double volume = 2;
  
 }

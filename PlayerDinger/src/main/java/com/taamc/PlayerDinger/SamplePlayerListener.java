@@ -27,8 +27,8 @@ public class SamplePlayerListener implements Listener {
 					p.playSound(
 							p.getLocation(),
 							SoundUtil.matchSoundType(plugin.config.sound),
-							plugin.config.volume,
-							plugin.config.pitch);
+							(float)plugin.config.volume,
+							(float)plugin.config.pitch);
 				}
 			}
 		}
